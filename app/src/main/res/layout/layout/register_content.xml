@@ -1,0 +1,135 @@
+<LinearLayout android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Sign-up Tool"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:onClick="closeThis"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+            android:layout_marginBottom="20dp"
+            android:drawableTint="@color/black"
+            android:drawablePadding="15dp"
+            android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reg_fname"
+            android:inputType="textPersonName"
+            android:layout_width="match_parent"
+            android:hint="Enter First Name "
+            android:backgroundTint="@color/white"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reg_lname"
+            android:layout_width="match_parent"
+            android:inputType="textPersonName"
+            android:hint="Enter Last Name"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_height="wrap_content">
+
+        <com.hbb20.CountryCodePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ccp_defaultNameCode="UG"
+            app:ccp_showFlag="true"
+            android:background="@drawable/button_bend"
+            android:paddingTop="9dp"
+            android:paddingBottom="7.5dp"
+            android:layout_weight="3.5"
+            android:layout_marginTop="5dp"
+            android:id="@+id/reg_ccp"
+            app:ccp_showNameCode="false"
+            app:ccp_showPhoneCode="false"
+            app:ccp_showFullName="false"
+            />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="0dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/reg_phone"
+                android:layout_width="match_parent"
+                android:inputType="phone"
+                android:hint="Enter Phone Number"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="12dp"
+                android:padding="5dp"
+                android:textColor="@color/orange"
+                android:textAlignment="textStart"
+                android:text="Verification for this number will be required during registration"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:id="@+id/gender_spinner"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:background="@drawable/button_bend"
+        android:paddingStart="15dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"/>
+
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:id="@+id/reg_terms"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/ic_baseline_spellcheck_24"
+            android:drawableTint="@android:color/holo_green_light"
+            android:text="I agree to One-Health Terms and Conditions" />
+
+     <Button
+         android:layout_width="match_parent"
+         android:text="Sign Up"
+         android:layout_gravity="end"
+         android:id="@+id/sign_up_btn"
+         android:paddingRight="30dp"
+         android:paddingLeft="30dp"
+         android:layout_marginTop="5dp"
+         android:backgroundTint="@color/colorAccent"
+         android:layout_weight="1"
+         android:layout_height="wrap_content"/>
+</LinearLayout>

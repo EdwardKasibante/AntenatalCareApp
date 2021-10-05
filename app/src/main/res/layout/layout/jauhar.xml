@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Testigh"
+        android:id="@+id/txt"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_below="@id/txt"
+        android:src="@drawable/ic_baseline_cancel_24"
+        android:layout_height="200dp"/>
+
+
+</RelativeLayout>

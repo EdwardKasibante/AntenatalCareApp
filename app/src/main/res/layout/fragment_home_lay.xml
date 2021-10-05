@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/kano"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:background="@drawable/new_serach"
+            android:hint="Search Everything"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:padding="10dp"
+            android:layout_height="45dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Recent Updates"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_below="@id/kano"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <include layout="@layout/card_new_design_update_row"/>
+            <include layout="@layout/card_new_design_update_row"/>
+
+            <include layout="@layout/card_new_design_update_row"/>
+            <include layout="@layout/card_new_design_update_row"/>
+            <include layout="@layout/card_new_design_update_row"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

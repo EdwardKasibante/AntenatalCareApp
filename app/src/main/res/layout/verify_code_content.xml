@@ -1,0 +1,87 @@
+<LinearLayout android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Phone Number Verification"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:drawableTint="@color/black"
+        android:drawablePadding="15dp"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/code_number"
+            android:inputType="textPersonName"
+            android:layout_width="match_parent"
+            android:hint="Your Phone number"
+            android:editable="false"
+            android:backgroundTint="@color/white"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="12dp"
+            android:padding="5dp"
+            android:textColor="@color/orange"
+            android:textAlignment="textStart"
+            android:text="Verification code was sent to the phone number below. This code expires in 30 minutes and if you will be required to register again."
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/code_code"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:hint="Enter Code "
+                android:maxLength="5"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="I did not receive the code. Resend"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/ic_baseline_spellcheck_24"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="15dp"
+        android:onClick="resend_code"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="Verify Phone"
+        android:layout_gravity="end"
+        android:id="@+id/sign_up_btn"
+        android:onClick="verify_code_now"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

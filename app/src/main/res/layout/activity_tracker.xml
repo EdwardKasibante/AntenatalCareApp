@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TrackerActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/my_gradient"
+        android:onClick="onBack"
+        app:navigationIcon="@drawable/white_back_arrow_24"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:drawableTint="@color/orange"
+            android:gravity="center"
+            android:text="Pregnancy Tracker"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@color/white"
+            tools:ignore="RtlCompat" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/set_layout"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:text="Select the Last Night of Menstruation Period (LNMP)"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/select"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/round_card"
+                android:drawablePadding="15dp"
+                android:ems="10"
+                android:text="Tap to select Date "
+                android:gravity="start|center"
+                android:paddingStart="15dp"
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/black"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/date_selected"
+                    android:inputType="textPersonName"
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:hint="Selected Date"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:text="Run a Pregnancy Tracker"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/info_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Know Your Pregnancy Progress"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical">
+                <include layout="@layout/tracker_info"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
